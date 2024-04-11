@@ -71,6 +71,10 @@ body {
   .coffee-btn {
     width: 30rem;
   }
+  .title {
+    font-size: 42px;
+    -webkit-text-stroke: 1px white;
+  }
 }
 
 /* Mobile size */
@@ -78,5 +82,10 @@ body {
   .coffee-btn {
     width: 15rem;
     height: 15rem;
+  }
+
+  .title {
+    font-size: 32px;
+    -webkit-text-stroke: 0.5px white;
   }
 }
