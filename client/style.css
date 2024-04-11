@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  margin: 2rem auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -19,10 +19,12 @@ body {
 }
 
 .title {
+  margin: 0;
   width: 50%;
   text-align: center;
-  font-size: 55px;
+  font-size: 52px;
   font-weight: 900;
+  -webkit-text-stroke: 2px white;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -35,7 +37,7 @@ body {
 }
 
 .coffee-btn {
-  width: 100%;
+  width: 40rem;
   background-image: url("images/coffee-cup2.jpg");
   background-size: cover;
   background-position: center;
@@ -46,14 +48,35 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 900;
   font-size: 30px;
+  -webkit-text-stroke: 2px black;
   padding: 3rem;
   margin: 1rem;
   color: rgb(255, 255, 255);
-  /* box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5); */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
   transition: opacity 0.8s ease;
+}
+
+.coffee-btn:hover {
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.8);
+  background-blend-mode: difference;
 }
 
 .coffee-btn.clicked {
   opacity: 0.9;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Tablet size */
+@media only screen and (max-width: 768px) {
+  .coffee-btn {
+    width: 30rem;
+  }
+}
+
+/* Mobile size */
+@media only screen and (max-width: 520px) {
+  .coffee-btn {
+    width: 15rem;
+    height: 15rem;
+  }
 }
