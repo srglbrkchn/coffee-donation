@@ -1,7 +1,12 @@
 const buttons = document.querySelectorAll(".coffee-btn");
 
+function toggleOpacity(button) {
+  button.classList.toggle("clicked");
+}
+
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
+    toggleOpacity(button);
     const itemId = parseInt(event.target.id);
     fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
