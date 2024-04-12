@@ -4,9 +4,16 @@ function toggleOpacity(button) {
   button.classList.toggle("clicked");
 }
 
+function playAudio() {
+  let audio = document.getElementById("change-audio");
+  audio.play();
+}
+
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     toggleOpacity(button);
+    playAudio();
+
     const itemId = parseInt(event.target.id);
     fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
